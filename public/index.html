@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Image Resizer</title>
+</head>
+<body>
+	<div class="container">
+		<div id="formContain">
+			<form action="/upload" method="post" enctype="multipart/form-data">
+				<div class="formCont">
+					<input type="file" accept=".png, .jpg, .webp" name="photo" id="photoSelect">
+					<label for="photoSelect" id="uploadLabel">Choose a file</label>
+				</div>
+				<div class="formCont">
+					<input type="text" name="imgWidth" placeholder="Width" class="resBox">
+				</div>
+				<div class="formCont">
+						<input type="text" name="imgHeight" placeholder="Height" class="resBox">
+				</div>
+				<div class="formCont">
+					<input type="text" name="compress" placeholder="Compress" class="resBox">
+				</div>
+				<div class="formCont">
+					<input placeholder="Degrees" type="text" name="degrees" id="compressText" class="resBox">
+				</div>
+				<div class="formCont">
+					<input type="submit" value="Start" id="submit">
+				</div>
+			</form>
+		</div>
+		<div id="tutorial">
+			<h1>Supported File types:</h1>
+			<p>JPG, PNG, WEBP</p>
+			<h1>Width:</h1>
+			<p>The width of the processed image in pixels.</p>
+			<h1>Height:</h1>
+			<p>The height of the processed image in pixels.</p>
+			<h1>Compress:</h1>
+				<p>JPEG Lossy Compression Quality (1-100, Defaults to 80)</p>
+				<p>PNG Compression is always 9 (highest), entered value is ignored.</p>
+				<p>Lossless WEBP compression, entered value is ignored.</p>
+			<h1>Rotate:</h1>
+			<p>Rotate your image (Only multiples of 90 accepted)</p>
+		</div>
+	</div>
+</body>
+</html>
